@@ -1,0 +1,34 @@
+Don't Panic
+On cleaning up after yourself
+
+Aidan Coyle
+Supporting Services
+acoyle@enova.com
+
+* What Is Panic/Recover For?
+
+.play panic.go
+
+* What Happens In Goroutines?
+
+.play panic_routines.go
+
+* Why, Russ Cox?!?
+
+Why would we choose to have panics work this way?
+
+It goes back to the lightweight threading model.
+
+* What Do We Do About It?
+
+Be careful about panicking in short lived routines.
+
+Long lived routines should probably have their own recovery logic.
+
+Pay particular attention to necessary cleanup.
+
+* How Could It Be Otherwise?
+
+Static analysis to detect uncaught panics (hackathon anyone?).
+
+Personal wishlist is for a `nopanic` keyword.
